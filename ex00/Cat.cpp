@@ -2,31 +2,30 @@
 
 Cat::Cat() : Animal("Cat")
 {
-    std::cout << "=== Cat default constructor called. ===" << std::endl;
+    std::cout << GREEN << "=== Cat default constructor called. ===" << RESET << std::endl;
 }
 
 Cat::Cat(std::string type) : Animal(type)
 {
-    std::cout << "=== Cat constructor with arg called. ===" << std::endl;
+    std::cout << GREEN << "=== Cat constructor with arg called. ===" << RESET << std::endl;
 }
 
 Cat::~Cat()
 {
-    std::cout << "=== Cat destructor called. ===" << std::endl;
+    std::cout << RED << "=== Cat destructor called. ===" << RESET << std::endl;
 }
 
 Cat::Cat(const Cat &cat)
 {
-    std::cout << "=== Cat copy constructor called. ===" << std::endl;
+    std::cout << YELLOW << "=== Cat copy constructor called. ===" << RESET << std::endl;
     *this = cat;
 }
 
 Cat &Cat::operator=(const Cat &cat)
 {
-    std::cout << "=== Cat Copy assignment operator called ===" << std::endl;
+    std::cout << YELLOW << "=== Cat Copy assignment operator called ===" << RESET << std::endl;
     type_ = cat.getType(); 
     return *this;
-
 }
 
 void Cat::makeSound() const

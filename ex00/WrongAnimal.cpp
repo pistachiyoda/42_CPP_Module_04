@@ -2,31 +2,30 @@
 
 WrongAnimal::WrongAnimal() : type_("WrongAnimal")
 {
-    std::cout << "=== WrongAnimal default constructor called. ===" << std::endl;
+    std::cout << GREEN << "=== WrongAnimal default constructor called. ===" << RESET << std::endl;
 }
 
 WrongAnimal::WrongAnimal(std::string type) : type_(type)
 {
-    std::cout << "=== WrongAnimal constructor with arg called. ===" << std::endl;
+    std::cout << GREEN << "=== WrongAnimal constructor with arg called. ===" << RESET << std::endl;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-    std::cout << "=== WrongAnimal destructor called. ===" << std::endl;
+    std::cout << RED << "=== WrongAnimal destructor called. ===" << RESET << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &animal)
 {
-    std::cout << "=== WrongAnimal copy constructor called. ===" << std::endl;
+    std::cout << YELLOW << "=== WrongAnimal copy constructor called. ===" << RESET << std::endl;
     *this = animal;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &animal)
 {
-    std::cout << "=== WrongAnimal Copy assignment operator called ===" << std::endl;
+    std::cout << YELLOW  << "=== WrongAnimal Copy assignment operator called ===" << RESET  << std::endl;
     type_ = animal.getType(); 
     return *this;
-
 }
 
 void WrongAnimal::makeSound() const

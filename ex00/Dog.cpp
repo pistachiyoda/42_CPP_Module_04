@@ -2,28 +2,28 @@
 
 Dog::Dog() : Animal("Dog")
 {
-    std::cout << "=== Dog default constructor called. ===" << std::endl;
+    std::cout << GREEN << "=== Dog default constructor called. ===" << RESET << std::endl;
 }
 
 Dog::Dog(std::string type) : Animal(type)
 {
-    std::cout << "=== Dog constructor with arg called. ===" << std::endl;
+    std::cout << GREEN << "=== Dog constructor with arg called. ===" << RESET << std::endl;
 }
 
 Dog::~Dog()
 {
-    std::cout << "=== Dog destructor called. ===" << std::endl;
+    std::cout << RED << "=== Dog destructor called. ===" << RESET << std::endl;
 }
 
 Dog::Dog(const Dog &dog)
 {
-    std::cout << "=== Dog copy constructor called. ===" << std::endl;
+    std::cout << YELLOW << "=== Dog copy constructor called. ===" << RESET << std::endl;
     *this = dog;
 }
 
 Dog &Dog::operator=(const Dog &dog)
 {
-    std::cout << "=== Dog Copy assignment operator called ===" << std::endl;
+    std::cout << YELLOW << "=== Dog Copy assignment operator called ===" << RESET << std::endl;
     type_ = dog.getType(); 
     return *this;
 
