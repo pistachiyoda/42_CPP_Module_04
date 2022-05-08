@@ -4,7 +4,7 @@
 
 __attribute__((destructor))
 static void destructor() {
-    system("leaks -q brain");
+    system("leaks -q abstractclass");
 }
 
 int main()
@@ -67,5 +67,8 @@ Cat cat_e;
 cat_e.getIdea(0);
 cat_e.setIdea(101, "idea_0");
 cat_e.setIdea(-1, "idea_0");
+
+// std::cout << "///////////// Animal instantiable test/////////////" << std::endl;
+// Animal test;
 return 0;
 }
