@@ -18,9 +18,10 @@ Cat::~Cat()
     delete brain_;
 }
 
-Cat::Cat(const Cat &cat)
+Cat::Cat(const Cat &cat) : Animal(cat)
 {
     std::cout << YELLOW << "=== Cat copy constructor called. ===" << RESET << std::endl;
+    brain_ = new Brain;
     *this = cat;
 }
 

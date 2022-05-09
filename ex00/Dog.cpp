@@ -15,10 +15,9 @@ Dog::~Dog()
     std::cout << RED << "=== Dog destructor called. ===" << RESET << std::endl;
 }
 
-Dog::Dog(const Dog &dog)
+Dog::Dog(const Dog &dog) : Animal(dog)
 {
     std::cout << YELLOW << "=== Dog copy constructor called. ===" << RESET << std::endl;
-    *this = dog;
 }
 
 Dog &Dog::operator=(const Dog &dog)

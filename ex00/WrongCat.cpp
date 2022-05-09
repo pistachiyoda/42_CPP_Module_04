@@ -15,10 +15,9 @@ WrongCat::~WrongCat()
     std::cout << RED << "=== WrongCat destructor called. ===" << RESET << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &cat)
+WrongCat::WrongCat(const WrongCat &cat) : WrongAnimal(cat)
 {
     std::cout << YELLOW << "=== WrongCat copy constructor called. ===" << RESET << std::endl;
-    *this = cat;
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &cat)

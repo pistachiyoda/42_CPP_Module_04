@@ -15,10 +15,9 @@ Cat::~Cat()
     std::cout << RED << "=== Cat destructor called. ===" << RESET << std::endl;
 }
 
-Cat::Cat(const Cat &cat)
+Cat::Cat(const Cat &cat) : Animal(cat)
 {
     std::cout << YELLOW << "=== Cat copy constructor called. ===" << RESET << std::endl;
-    *this = cat;
 }
 
 Cat &Cat::operator=(const Cat &cat)

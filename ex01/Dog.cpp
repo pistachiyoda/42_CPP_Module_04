@@ -18,17 +18,17 @@ Dog::~Dog()
     delete brain_;
 }
 
-Dog::Dog(const Dog &dog)
+Dog::Dog(const Dog &dog) : Animal(dog)
 {
     std::cout << YELLOW << "=== Dog copy constructor called. ===" << RESET << std::endl;
+    brain_ = new Brain;
     *this = dog;
 }
 
 Dog &Dog::operator=(const Dog &dog)
 {
     std::cout << YELLOW << "=== Dog Copy assignment operator called ===" << RESET << std::endl;
-    type_ = dog.getType(); 
-    brain_ = new Brain;
+    type_ = dog.getType();
     *brain_ = *dog.brain_;
     return *this;
 }
