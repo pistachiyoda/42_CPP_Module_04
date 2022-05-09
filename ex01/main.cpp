@@ -2,10 +2,10 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-__attribute__((destructor))
-static void destructor() {
-    system("leaks -q brain");
-}
+// __attribute__((destructor))
+// static void destructor() {
+//     system("leaks -q brain");
+// }
 
 int main()
 {
