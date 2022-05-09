@@ -40,6 +40,7 @@ void Brain::setIdea(int i, std::string idea)
     if (i >= 100 || i < 0)
     {
         std::cerr << RED << "!!! Idea index should be 0 ~ 99 !!!" << RESET << std::endl; 
+        return ;
     }
     ideas_[i] = idea;
 }
