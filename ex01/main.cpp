@@ -9,6 +9,11 @@ static void destructor() {
 
 int main()
 {
+std::cout << "///////////// Brain test /////////////" << std::endl;
+Brain *brain = new Brain();
+delete brain;
+std::cout << std::endl;
+
 std::cout << "///////////// Leak test /////////////" << std::endl;
 const Animal* dog = new Dog();
 const Animal* cat = new Cat();
@@ -61,6 +66,7 @@ dog_1->getIdea(10);
 
 delete dog_1;
 delete dog_2;
+std::cout << std::endl;
 
 std::cout << "///////////// Deep copy test 3/////////////" << std::endl;
 Cat cat_e;
